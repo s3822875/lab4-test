@@ -33,6 +33,6 @@ jobs:
         run: npm run test-unit
       - if: success() || failure()
         uses: actions/upload-artifact@v3
-          with:
+        with:
           name: unit-test-${{ github.sha }}
           path: reports/report.xml
